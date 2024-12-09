@@ -1,34 +1,34 @@
-import './Header.css'
+import React from 'react'
+import s from './Header.module.scss'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-
     <>
-    <header>
+    <header className={s.header}>
+      <div className="container">
+        <nav className={s.nav}>
+          <Link to={'/'} className={s.logo}>SHOP.CO</Link>
 
-        <div className="container">
-            <div className="head">
-                <div className="logo">
-                    <h1>IT-Academy</h1>
-                </div>
+        <div className={s.menu}>
+          <Link>Shop</Link>
+          <Link>On Sale</Link>
+          <Link>New Sale</Link>
+          <Link>Brands</Link>
+          </div>
 
-                <nav>
+          <input placeholder='Search for product...' className={s.search} type='text' name='' id=''/>
 
-                    <a href="">Курсы</a>
-                    <a href="">Бесплатные Курсы</a>
-                    <a href="">Филиалы</a>
-                    <a href="">Контакты</a>
+          <div className={s.box}>
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
 
-
-                </nav>
-
-                <button>Позвонить</button>
-            </div>
-        </div>
+        </nav>
+      </div>
     </header>
     </>
-
-)
+  )
 }
 
 export default Header

@@ -1,17 +1,20 @@
 import React from 'react'
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
-import Hero from './components/Main/Hero'
-
+import Home from './pages/Home'
+import SinglePage from './pages/SinglePage'
 
 const App = () => {
   return (
-
     <>
-    <Header />
-    <Hero />
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/product/:id/' element={<SinglePage/>}/>
+    </Routes>
     </>
-
-    )
+  )
 }
 
 export default App
